@@ -2,6 +2,8 @@ import 'package:custom_navigation_bar/custom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:recipe_application/constants.dart';
 import 'package:recipe_application/screens/home_screen.dart';
+import 'package:recipe_application/screens/profile_screen.dart';
+import 'package:recipe_application/screens/saved_screen.dart';
 
 class NavBar extends StatefulWidget {
   const NavBar({super.key});
@@ -12,9 +14,9 @@ class NavBar extends StatefulWidget {
 
 class _NavBarState extends State<NavBar> {
   List screen = [
+    const SavedScreen(),
     const HomeScreen(),
-    const HomeScreen(),
-    const HomeScreen(),
+    const ProfileScreen(),
   ];
 
   int currentIndex = 1;
@@ -29,7 +31,6 @@ class _NavBarState extends State<NavBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: screen[currentIndex],
-      extendBody: true,
       bottomNavigationBar: CustomNavigationBar(
         iconSize: 30.0,
         selectedColor: buttons,
