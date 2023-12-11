@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_application/constants.dart';
 import 'package:recipe_application/widgets/category_list.dart';
+import 'package:recipe_application/widgets/category_tile.dart';
+import 'package:recipe_application/widgets/recent_recipe_tile.dart';
 import 'package:recipe_application/widgets/search_container.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -100,6 +102,59 @@ class _HomeScreenState extends State<HomeScreen> {
                     padding: const EdgeInsets.only(right: 10, top: 10),
                     itemBuilder: (BuildContext context, int index) {
                       return const CategoryList(categoryName: 'Cake');
+                    },
+                  ),
+                ),
+              ),
+
+              //categories recipes
+              Padding(
+                padding: const EdgeInsets.only(top: 15),
+                child: SizedBox(
+                  height: 170,
+                  width: 140,
+                  child: ListView.builder(
+                    shrinkWrap: true,
+                    itemCount: 10,
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (BuildContext context, int index) {
+                      return const CategoryTile(
+                        foodImage: 'img/cake.jpg',
+                        foodName: 'Chocolate cake',
+                        rating: '4.9',
+                      );
+                    },
+                  ),
+                ),
+              ),
+
+              //Recent recipes
+              const Padding(
+                padding: EdgeInsets.only(top: 15, left: 10),
+                child: Text(
+                  'Recent recipes',
+                  style: TextStyle(
+                    fontSize: fontSizeHeading,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 10),
+                child: SizedBox(
+                  height: 200,
+                  width: 140,
+                  child: ListView.builder(
+                    shrinkWrap: true,
+                    itemCount: 10,
+                    scrollDirection: Axis.vertical,
+                    itemBuilder: (BuildContext context, int index) {
+                      return const RecentRecipe(
+                        recipeImage: 'img/coctail.jpeg',
+                        recipeName: 'Red Coctail',
+                        category: 'Drinks',
+                        rating: 4.8,
+                      );
                     },
                   ),
                 ),
