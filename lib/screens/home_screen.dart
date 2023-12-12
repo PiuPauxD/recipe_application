@@ -111,7 +111,7 @@ class _HomeScreenState extends State<HomeScreen> {
               Padding(
                 padding: const EdgeInsets.only(top: 15),
                 child: SizedBox(
-                  height: 170,
+                  height: 160,
                   width: 140,
                   child: ListView.builder(
                     shrinkWrap: true,
@@ -140,9 +140,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 10),
+                padding: const EdgeInsets.only(top: 20),
                 child: SizedBox(
-                  height: 200,
+                  height: MediaQuery.of(context).size.height / 3,
                   width: 140,
                   child: ListView.builder(
                     shrinkWrap: true,

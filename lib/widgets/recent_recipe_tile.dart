@@ -30,7 +30,7 @@ class RecentRecipe extends StatelessWidget {
               children: [
                 Padding(
                   padding:
-                      const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                      const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(8),
                     child: Image.asset(
@@ -43,6 +43,7 @@ class RecentRecipe extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 5),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         recipeName,

@@ -18,7 +18,7 @@ class CategoryTile extends StatelessWidget {
       padding: const EdgeInsets.only(left: 10),
       child: Container(
         width: 140,
-        height: 170,
+        height: 160,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
           color: searcContainer,
@@ -40,7 +40,7 @@ class CategoryTile extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+              padding: const EdgeInsets.symmetric(horizontal: 5),
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
